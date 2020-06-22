@@ -1,0 +1,21 @@
+{
+    "name": "chain33-sdk-php/chain33",
+    "description": "chain33 php sdk",
+    "type": "library",
+    "keywords": ["chain33","php"],
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "zhaeng",
+            "email": "zhaeng1011@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "chain33\\phpsdk\\": "src"
+        }
+    }
+}
