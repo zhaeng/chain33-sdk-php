@@ -1,0 +1,16 @@
+syntax = "proto3";
+import "transaction.proto";
+
+package chain33.phpsdk.lib.protobuf.types;
+option go_package = "github.com/33cn/chain33/types";
+option php_metadata_namespace = "chain33/phpsdk/lib/protobuf";
+// message for execs.coins
+message CoinsAction {
+    oneof value {
+        AssetsTransfer       transfer       = 1;
+        AssetsWithdraw       withdraw       = 4;
+        AssetsGenesis        genesis        = 2;
+        AssetsTransferToExec transferToExec = 5;
+    }
+    int32 ty = 3;
+}

@@ -1,10 +1,14 @@
 <?php
 
+if (!extension_loaded('gmp')) {
+    exit("gmp extension is not install\r\n");
+}
 function classLoader($class)
 {
     $path = str_replace('\\', DIRECTORY_SEPARATOR, $class);
     $file = __DIR__ . DIRECTORY_SEPARATOR .'src'. DIRECTORY_SEPARATOR . $path . '.php';
     $file = str_replace('/chain33/phpsdk','',$file);
+    $file = str_replace('/Chain33/Phpsdk','',$file);
     if (file_exists($file)) {
         require_once $file;
     }

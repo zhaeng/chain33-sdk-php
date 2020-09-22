@@ -11,11 +11,19 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "~2.0.0"
+        "kornrunner/secp256k1": "^0.1.2",
+        "google/protobuf": "^3.13"
     },
     "autoload": {
         "psr-4": {
-            "chain33\\phpsdk\\": "src"
+            "chain33\\phpsdk\\": "src",
+            "Chain33\\Phpsdk\\": "src"
+        }
+    },
+    "config": {
+          "process-timeout": 1800,
+          "github-oauth": {
+          "github.com": "4936ece29924920225c48f283edf5a51a1af1380"
         }
     }
 }
